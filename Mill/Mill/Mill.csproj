@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D8F72B4-EF78-4A54-B2C6-3A9112DB2D90}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mill</RootNamespace>
+    <AssemblyName>Mill</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddWorker.Designer.cs">
+      <DependentUpon>AddWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSetting.Designer.cs">
+      <DependentUpon>AdminSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="common.cs" />
+    <Compile Include="Cutting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cutting.Designer.cs">
+      <DependentUpon>Cutting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DailyCuttingReportOfAllWorkers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyCuttingReportOfAllWorkers.Designer.cs">
+      <DependentUpon>DailyCuttingReportOfAllWorkers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DailyExpenditure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyExpenditure.Designer.cs">
+      <DependentUpon>DailyExpenditure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DailyExpenditureReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyExpenditureReport.Designer.cs">
+      <DependentUpon>DailyExpenditureReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="databaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>databaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowMessage.Designer.cs">
+      <DependentUpon>frmShowMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiceceKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dailyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dailyReport.Designer.cs">
+      <DependentUpon>dailyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DailyReportCutting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyReportCutting.Designer.cs">
+      <DependentUpon>DailyReportCutting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DailyStichingReportOfAllWorkers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyStichingReportOfAllWorkers.Designer.cs">
+      <DependentUpon>DailyStichingReportOfAllWorkers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delievery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delievery.Designer.cs">
+      <DependentUpon>Delievery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonthlyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonthlyReport.Designer.cs">
+      <DependentUpon>MonthlyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monthlyReportCutting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monthlyReportCutting.Designer.cs">
+      <DependentUpon>monthlyReportCutting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyMessageBox.Designer.cs">
+      <DependentUpon>MyMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchasedCloth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchasedCloth.Designer.cs">
+      <DependentUpon>PurchasedCloth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGenerate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportGenerate.Designer.cs">
+      <DependentUpon>ReportGenerate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stiching Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stiching Report.Designer.cs">
+      <DependentUpon>Stiching Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stiching.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stiching.Designer.cs">
+      <DependentUpon>Stiching.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StichingDaily Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StichingDaily Report.Designer.cs">
+      <DependentUpon>StichingDaily Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StichingMonthlyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StichingMonthlyReport.Designer.cs">
+      <DependentUpon>StichingMonthlyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StichingReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StichingReturn.Designer.cs">
+      <DependentUpon>StichingReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StichingWeeklyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StichingWeeklyReport.Designer.cs">
+      <DependentUpon>StichingWeeklyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StichingYearlyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StichingYearlyReport.Designer.cs">
+      <DependentUpon>StichingYearlyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeeklyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeeklyReport.Designer.cs">
+      <DependentUpon>WeeklyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="weeklyReportCutting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="weeklyReportCutting.Designer.cs">
+      <DependentUpon>weeklyReportCutting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Workers.Designer.cs">
+      <DependentUpon>Workers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YearlyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YearlyReport.Designer.cs">
+      <DependentUpon>YearlyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yearlyReportCutting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yearlyReportCutting.Designer.cs">
+      <DependentUpon>yearlyReportCutting.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddWorker.resx">
+      <DependentUpon>AddWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSetting.resx">
+      <DependentUpon>AdminSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cutting.resx">
+      <DependentUpon>Cutting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyCuttingReportOfAllWorkers.resx">
+      <DependentUpon>DailyCuttingReportOfAllWorkers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyExpenditure.resx">
+      <DependentUpon>DailyExpenditure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyExpenditureReport.resx">
+      <DependentUpon>DailyExpenditureReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowMessage.resx">
+      <DependentUpon>frmShowMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiceceKey.resx">
+      <DependentUpon>LiceceKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dailyReport.resx">
+      <DependentUpon>dailyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyReportCutting.resx">
+      <DependentUpon>DailyReportCutting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyStichingReportOfAllWorkers.resx">
+      <DependentUpon>DailyStichingReportOfAllWorkers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delievery.resx">
+      <DependentUpon>Delievery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonthlyReport.resx">
+      <DependentUpon>MonthlyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monthlyReportCutting.resx">
+      <DependentUpon>monthlyReportCutting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyMessageBox.resx">
+      <DependentUpon>MyMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PurchasedCloth.resx">
+      <DependentUpon>PurchasedCloth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportGenerate.resx">
+      <DependentUpon>ReportGenerate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stiching Report.resx">
+      <DependentUpon>Stiching Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stiching.resx">
+      <DependentUpon>Stiching.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StichingDaily Report.resx">
+      <DependentUpon>StichingDaily Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StichingMonthlyReport.resx">
+      <DependentUpon>StichingMonthlyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StichingReturn.resx">
+      <DependentUpon>StichingReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StichingWeeklyReport.resx">
+      <DependentUpon>StichingWeeklyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StichingYearlyReport.resx">
+      <DependentUpon>StichingYearlyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeeklyReport.resx">
+      <DependentUpon>WeeklyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="weeklyReportCutting.resx">
+      <DependentUpon>weeklyReportCutting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workers.resx">
+      <DependentUpon>Workers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YearlyReport.resx">
+      <DependentUpon>YearlyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yearlyReportCutting.resx">
+      <DependentUpon>yearlyReportCutting.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="databaseDataSet.xsc">
+      <DependentUpon>databaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="databaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>databaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="databaseDataSet.xss">
+      <DependentUpon>databaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="database.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="database_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>database.mdf</DependentUpon>
+    </Content>
+    <Content Include="Resources\title_bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
